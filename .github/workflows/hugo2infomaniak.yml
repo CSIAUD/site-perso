@@ -3,7 +3,7 @@ name: hugo2infomaniak
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -12,17 +12,17 @@ jobs:
         
       - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes
+          submodules: true  # Fetch site-perso themes
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
+      - name: Setup site-perso
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true 
 
       - name: Build
-        run: hugo --minify
+        run: site-perso --minify
       
       - name: SFTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
@@ -31,3 +31,4 @@ jobs:
           ftp-username: ${{ secrets.FTP_USER }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public/
+	 
