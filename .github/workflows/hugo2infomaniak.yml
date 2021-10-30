@@ -1,33 +1,26 @@
-name: hugo2infomaniak
-
-on:
-  push:
-    branches:
-      - master
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
     steps:
-        
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch site-perso themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
 
-      - name: Setup site-perso
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true 
-
-      - name: Build
-        run: site-perso --minify
+    - name: Use Node.js 12
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
       
-      - name: SFTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
-        with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USER }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-	 
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ secrets.FTP_SERVER}}
+        username: ${{ secrets.FTP_USER}}
+        password: ${{ secrets.FTP_PASSWORD }}
