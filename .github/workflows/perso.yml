@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Perso
-        uses: peaceiris/actions-perso@v2
+        uses: /web
         with:
           perso-version: 'latest'
           extended: true 
