@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
     <header>
         <img src="img/logo.png" alt="logo">
         <H1>Cyprien Siaud</H1>
     </header>
     <main>
-        <section>
-            <h2>Mon parcours</h2>
+        <section id="parcours">
             <div>
-                "
-                    Ayant toujours eu du mal avec à l'école (le collège en particulier), je me suis tourné vers le seul domaine qui m'intéressait, l'informatique.<br>
+                <h2>Mon parcours</h2>
+                <p>Ayant toujours eu du mal avec à l'école (le collège en particulier), je me suis tourné vers le seul domaine qui m'intéressait, l'informatique.<br>
                     Après le collège, ne pouvant et ne voulant pas aller dans une fillière générale je me suis tourné vers un BAC Pro.<br>
                     <br>
                     <img src="https://www.lycee-saint-eloi.com/wp-content/uploads/2015/04/Logo_72dpi_RVB_POSITIF1.png" alt="logo lycée Saint Eloi">
@@ -26,11 +31,12 @@
                     <br>
                     <img src="https://www.ynov-aix.com/app/uploads/2019/10/logo_ynov_campus_aix.png" alt="Logo Aix Ynov Campus">
                     Une fois cette formation terminée, je suis retourné dans le secteur informatique en intégrant Ynov Aix et me voilà à 20ans à faire ce que j'aime dans un environnement de travail où l'autonomie et l'autodidaxie sont de mises.                
+                </p>
             </div>
         </section>
         <section>
-            <h2>Mes Formations</h2>
             <div>
+                <h2>Mes Formations</h2>
                 <ul>
                     <li>
                         <img src="https://www.ynov-aix.com/app/uploads/2019/10/logo_ynov_campus_aix.png" alt="">
@@ -69,7 +75,8 @@
             </div>
         </section>
         <section>
-            <h2>A Propos</h2>
+            <div>
+                <h2>A Propos</h2>
             <div>
                 <div id='map'></div>
                 <ul>
@@ -101,7 +108,6 @@
                     style: 'mapbox://styles/creanics/ckqm8zxy1046i18o93t0bedzx',
                     center: [5.681652,43.447712],
                     zoom: 8
-                    // bounds: [[5.481652,43.247712], [5.881652,43.647712]]
                     });
 
                     var marker = new mapboxgl.Marker()
@@ -115,6 +121,7 @@
                         trackUserLocation: true
                     }));
                 </script>
+            </div>
             </div>
         </section>
     </main>
