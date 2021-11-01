@@ -1,4 +1,6 @@
 html {
+    font-family: Roboto Slab, serif;
+
     scrollbar-color: #2ec4b6 #242b2a;
 
     --color-title: rgb(46, 196, 182);
@@ -106,6 +108,14 @@ section>div{
 }
 #apropos img{
     max-width: 25px;
+}
+#apropos ul li:last-of-type a{
+    color: rgb(10, 102, 194);
+}
+#apropos a *{
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 #map{
