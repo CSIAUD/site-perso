@@ -16,6 +16,11 @@ header{
     align-items: center;
     position: sticky;
     top: 0;
+    transition: all 0.15s linear;
+}
+body.scroll-down header{
+    top: -64px;
+    transition: all 0.15s linear;
 }
 header, header>*{
     height: 64px;
