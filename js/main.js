@@ -46,7 +46,6 @@ function resiser(){
       height = window.innerHeight
     }
     height -= 20
-    console.log(height)
     let elems = document.querySelectorAll('section')
     for(let elem of elems){
         elem.style.minHeight = height + "px"
