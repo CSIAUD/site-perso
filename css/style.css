@@ -34,8 +34,11 @@ h1{
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 h2{
-    color :  var(--color-title-section);
+    color:  var(--color-title-section);
     font-family: Courgette, cursive;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 0 0 20px;
     height: max-content;
     text-align: center;
     text-decoration: underline;
@@ -78,7 +81,7 @@ section img{
 section>div{
     background-color: rgba(255,255,255,0.7);
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 16px;
     border-radius: 10px;
 }
 
