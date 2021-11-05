@@ -5,13 +5,14 @@ html {
 
     --color-title: rgb(46, 196, 182);
     --color-title-section: rgb(215, 79, 53);
+    --color-header: rgb(57, 76, 102);
 }
 body{
     margin: 0;
 }
 
 header{
-    background-color : rgb(57, 76, 102);
+    background: var(--color-header);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -126,4 +127,23 @@ section>div{
     height: 270px;
     background-color: red;
     margin-top: 15px;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--color-header);
+    color: ivory;
+}
+#footer img{
+    max-width: 25px;
+}
+#footer a *{
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+#footer a{
+    color: ivory;
 }
