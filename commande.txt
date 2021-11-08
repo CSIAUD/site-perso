@@ -1,0 +1,1 @@
+html>head+body>(header>img+H1)+(main>(section>h2+div)*3)+footer
