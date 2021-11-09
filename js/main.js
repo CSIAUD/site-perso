@@ -5,6 +5,9 @@ const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
 let lastScroll = 0;
 
+window.addEventListener('resize', (ev) => resiser())
+window.addEventListener('load', (ev) => resiser())
+
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
   let winWidth = window.innerWidth
@@ -34,9 +37,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-window.addEventListener('resize', (ev) => resiser())
-
-window.addEventListener('load', (ev) => resiser())
 function resiser(){
     let header = (document.getElementsByTagName('header')[0]).getBoundingClientRect()
     let height
@@ -50,7 +50,7 @@ function resiser(){
     for(let elem of elems){
         elem.style.minHeight = height + "px"
     }
-    height -= 20
+    height -= 32
     let elems2 = document.querySelectorAll('section > div')
     for(let elem of elems2){
         elem.style.minHeight = height + "px"
