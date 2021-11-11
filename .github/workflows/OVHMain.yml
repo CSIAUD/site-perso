@@ -20,4 +20,4 @@ jobs:
         server: ${{ secrets.FTP_SERVEROVH }}
         username: ${{ secrets.FTP_USEROVH }}
         password: ${{ secrets.FTP_PASSWORDOVH }}
-        server-dir: /www/test/new
+        server-dir: /www/test/new/
