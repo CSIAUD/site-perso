@@ -13,11 +13,16 @@ function responsive(){
         let resPX = "16px "+padX+"px"
         let resMX = "0 "+margX+"%"
         let resW = "calc("+width+"% - ("+(padX*2)+"px))"
+
         for(let elem of elemsDiv){
-            elem.style.width =  resW// Regle du pourcentage-20px
+            elem.style.width =  resW // Regle du pourcentage-20px
             elem.style.margin = resMX
             elem.style.padding = resPX
         }
+        // let elem = document.querySelector("footer>ul")
+        // elem.style.width =  resW
+        // elem.style.margin = resMX
+        // elem.style.padding = resPX
     }else{
         for(let elem of elemsDiv){
             elem.style.width = ""
