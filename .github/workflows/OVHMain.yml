@@ -2,6 +2,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 name: 🚀 Deploy OVHwebsite on pull request on main
 jobs:
   web-deploy:
