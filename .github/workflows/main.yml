@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy OVHwebsite on pull request on test
+name: 🚀 Deploy Main(tests)
 jobs:
   web-deploy:
     name: 🎉 Deploy
